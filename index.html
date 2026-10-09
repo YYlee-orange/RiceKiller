@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3eee5" />
+    <title>鲸鱼娘狂吃炒饭</title>
+    <script type="module" crossorigin src="./assets/index-Cx_nQne5.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Tfpfvk1Y.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img" aria-label="蓝鲸标记"><ellipse cx="14" cy="17" rx="10" ry="6.6" fill="#2f62c4"/><path d="M23 15c4-2.6 4.8 1 4.4 5.4-2.6-1.4-4-2.4-4.4-5.4z" fill="#2f62c4"/><circle cx="10" cy="15.6" r="1.5" fill="#fff"/><path d="M8 10.4c.6-2.6 2.8-1.6 3.4.4" stroke="#2f62c4" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="brand-copy"><h1>鲸鱼娘狂吃炒饭</h1><p>WHALE MAID · FRIED RICE</p></div>
+        <div class="top-note"><span class="live-dot"></span><span id="status">炒饭已上桌 · 点击开吃</span></div>
+      </header>
+      <main class="workbench">
+        <section class="canvas-wrap" aria-label="炒饭盘子">
+          <div class="paper-label"><span id="stroke-count">0% 已吃</span><span id="topping-count">配料 0 / 0</span></div>
+          <div class="canvas-hint" id="canvas-hint">点击盘中炒饭，让鲸鱼娘趴下开吃</div>
+        </section>
+        <aside class="tool-rail" aria-label="游戏操作">
+          <div class="rail-heading"><span>KITCHEN</span><span class="rail-rule"></span></div>
+          <button class="finish-button" id="finish" type="button"><span class="finish-icon">✓</span><span>吃饱收盘</span></button>
+          <div class="wheel-block">
+            <div class="wheel-title">移动鲸鱼娘<span>按住并转动</span></div>
+            <div class="wheel" id="wheel" role="application" aria-label="按住轮盘控制鲸鱼娘移动">
+              <div class="wheel-track"></div><div class="wheel-center"><span class="wheel-arrow">↑</span><span>MOVE</span></div>
+              <div class="wheel-knob" id="wheel-knob"></div>
+            </div>
+            <div class="wheel-directions"><span>↑</span><span>↓</span><span>←</span><span>→</span></div>
+          </div>
+          <div class="palette-block"><div class="section-label">轨迹颜色</div><div class="swatches" id="swatches">
+            <button class="swatch active" data-color="#6f7478" aria-label="灰色轨迹"></button>
+            <button class="swatch pea" data-color="#68a77b" aria-label="青豆色"></button>
+            <button class="swatch corn" data-color="#d8bd62" aria-label="玉米色"></button>
+            <button class="swatch carrot" data-color="#d9815c" aria-label="胡萝卜色"></button>
+          </div><p class="palette-tip">配料会切换后续轨迹，已画路径不变</p></div>
+          <div class="rail-actions"><button id="save" type="button" class="text-action">↗ <span>保存作品图片</span></button><button id="clear" type="button" class="text-action">↺ <span>换一盘炒饭</span></button></div>
+          <p class="rail-footnote">慢慢吃，盘底的图案会自己浮出来。</p>
+        </aside>
+      </main>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <section id="project-poster" class="poster" aria-label="鲸鱼娘狂吃炒饭游戏封面" hidden>
+        <div class="poster-paper">
+          <div class="poster-top"><span>WHALE MAID · FRIED RICE</span><span>点击开吃 · 转盘移动</span></div>
+          <div class="poster-art">
+            <svg viewBox="0 0 760 420" role="img" aria-label="一盘炒饭被吃出曲线路径，露出灰色盘底">
+              <ellipse cx="380" cy="214" rx="330" ry="176" fill="#c3c7ca"/>
+              <ellipse cx="380" cy="210" rx="306" ry="158" fill="#9aa0a5"/>
+              <ellipse cx="380" cy="210" rx="306" ry="158" fill="none" stroke="#7d8387" stroke-width="2"/>
+              <defs>
+                <clipPath id="rice-area"><ellipse cx="380" cy="210" rx="276" ry="140"/></clipPath>
+                <mask id="eaten"><rect x="0" y="0" width="760" height="420" fill="#fff"/><path d="M150 258 C214 150 300 300 366 200 C420 118 470 288 538 206 C576 160 606 196 628 186" stroke="#000" stroke-width="42" fill="none" stroke-linecap="round"/></mask>
+              </defs>
+              <g clip-path="url(#rice-area)" mask="url(#eaten)">
+                <rect x="100" y="60" width="560" height="300" fill="#f3e8cf"/>
+                <g fill="#faf4e4"><ellipse cx="170" cy="120" rx="11" ry="6" transform="rotate(24 170 120)"/><ellipse cx="250" cy="98" rx="11" ry="6" transform="rotate(-38 250 98)"/><ellipse cx="340" cy="112" rx="11" ry="6" transform="rotate(12 340 112)"/><ellipse cx="430" cy="96" rx="11" ry="6" transform="rotate(54 430 96)"/><ellipse cx="520" cy="118" rx="11" ry="6" transform="rotate(-18 520 118)"/><ellipse cx="600" cy="140" rx="11" ry="6" transform="rotate(40 600 140)"/><ellipse cx="200" cy="190" rx="11" ry="6" transform="rotate(-28 200 190)"/><ellipse cx="300" cy="258" rx="11" ry="6" transform="rotate(16 300 258)"/><ellipse cx="470" cy="248" rx="11" ry="6" transform="rotate(-48 470 248)"/><ellipse cx="560" cy="290" rx="11" ry="6" transform="rotate(30 560 290)"/><ellipse cx="240" cy="310" rx="11" ry="6" transform="rotate(-12 240 310)"/><ellipse cx="400" cy="320" rx="11" ry="6" transform="rotate(44 400 320)"/></g>
+                <g fill="#ece0c0"><ellipse cx="210" cy="150" rx="10" ry="5.4" transform="rotate(-54 210 150)"/><ellipse cx="380" cy="160" rx="10" ry="5.4" transform="rotate(22 380 160)"/><ellipse cx="540" cy="180" rx="10" ry="5.4" transform="rotate(-34 540 180)"/><ellipse cx="330" cy="296" rx="10" ry="5.4" transform="rotate(52 330 296)"/><ellipse cx="500" cy="316" rx="10" ry="5.4" transform="rotate(-20 500 316)"/></g>
+                <circle cx="262" cy="150" r="13" fill="#45c4c0" stroke="#2b8a84" stroke-width="2"/>
+                <circle cx="505" cy="268" r="13" fill="#45c4c0" stroke="#2b8a84" stroke-width="2"/>
+                <rect x="400" y="274" width="24" height="22" rx="9" fill="#f0cc4c" stroke="#c79f2e" stroke-width="2"/>
+                <rect x="182" y="222" width="24" height="22" rx="9" fill="#f0cc4c" stroke="#c79f2e" stroke-width="2"/>
+                <rect x="574" y="236" width="24" height="24" rx="6" fill="#ed7945" stroke="#cb5f2d" stroke-width="2" transform="rotate(-10 586 248)"/>
+                <rect x="306" y="134" width="24" height="24" rx="6" fill="#ed7945" stroke="#cb5f2d" stroke-width="2" transform="rotate(14 318 146)"/>
+              </g>
+              <g transform="translate(628 150) scale(2.1)">
+                <path d="M0 14 C18 12 24 2 24 -4 C20 8 26 14 26 18 C16 21 6 20 0 19z" fill="#6aa6ea"/>
+                <ellipse cx="0" cy="-2" rx="25" ry="30" fill="#24469c"/>
+                <path d="M-15 6 C-23 24 -17 29 -17 29 L17 29 C23 24 15 6 15 6z" fill="#1f3f8f"/>
+                <path d="M-17 29 C-9 34 0 31 0 31 C9 34 17 29 17 29 L17 24 L-17 24z" fill="#f7f9ff"/>
+                <path d="M-9 4 C-12 20 -8 24 -8 24 L8 24 C12 20 9 4 9 4z" fill="#f7f9ff"/>
+                <ellipse cx="0" cy="14" rx="6.4" ry="4.2" fill="#2f62c4"/>
+                <path d="M5 13 C10 10 9.5 16 9.5 16z" fill="#2f62c4"/>
+                <circle cx="0" cy="-11" r="14.6" fill="#fdeede"/>
+                <path d="M-15 -10 C-16 -24 -4 -26 -4 -26 C7 -28 15 -19 15 -19 C16 -11 15 -9 15 -9 C8 -18 2 -13 2 -13 C-4 -19 -9 -12 -9 -12 C-13 -17 -15 -10 -15 -10z" fill="#24469c"/>
+                <path d="M1 -25 C0 -34 7 -35 7 -35 C1 -31 4 -24 4 -24z" fill="#24469c"/>
+                <path d="M-13 -20 C0 -31 13 -20 13 -20 C0 -25 -13 -20 -13 -20z" fill="#f7f9ff"/>
+                <ellipse cx="-5.4" cy="-9" rx="2.5" ry="3.3" fill="#1d3f85"/><ellipse cx="5.4" cy="-9" rx="2.5" ry="3.3" fill="#1d3f85"/>
+                <path d="M-2.2 -3.6 C0 -0.6 2.2 -3.6 2.2 -3.6z" fill="#e8657a"/>
+              </g>
+            </svg>
+          </div>
+          <div class="poster-bottom">
+            <div><p>DEEPSEEK 鲸鱼娘</p><h2>吃光这盘炒饭，<br>画出盘底的线。</h2></div>
+            <div class="poster-caption">点击落点 · 转盘移动<br>青豆 · 玉米 · 胡萝卜换色</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
